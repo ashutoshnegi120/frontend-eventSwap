@@ -11,7 +11,7 @@ export default function useSwapSSE({ onRefreshRequests, onRefreshDashboard }) {
     useEffect(() => {
         if (!email) return;
 
-        const base = import.meta.env.VITE_API_BASE || "http://localhost:8080";
+        const base = import.meta.env.VITE_API_URL;
         const es = new EventSource(`${base}/SSE/${encodeURIComponent(email)}`);
         esRef.current = es;
 
