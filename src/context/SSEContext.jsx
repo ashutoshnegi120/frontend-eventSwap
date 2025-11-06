@@ -32,7 +32,7 @@ export function SSEProvider({ children }) {
         }
 
         const connect = () => {
-            const sseUrl = `http://localhost:8080/api/SSE/${encodeURIComponent(email)}`;
+            const sseUrl = `https://backend-1fkt.onrender.com/api/SSE/${encodeURIComponent(email)}`;
             const eventSource = new EventSource(sseUrl);
             sourceRef.current = eventSource;
 
